@@ -15,4 +15,9 @@ public class Tag {
     @NotNull
     @Size(min = 2, max = 15)
     private String name;
+
+    public Tag(long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
 }

@@ -7,7 +7,6 @@ import com.lov2code.resthomework.service.pet.PetServiceImpl;
 import io.swagger.annotations.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -15,9 +14,9 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.Optional;
 
-@Api(value = "Pet Rest Controller", tags = "/pets") // TODO
+@Api(value = "Pet Rest Controller", tags = "/pets")
 @RestController
-@RequiredArgsConstructor // TODO
+@RequiredArgsConstructor
 @RequestMapping(value = "/pets")
 public class PetController {
 
@@ -28,7 +27,8 @@ public class PetController {
             @ApiResponse(code = 200, message = "Success|OK"),
             @ApiResponse(code = 401, message = "Not Authorized!"),
             @ApiResponse(code = 403, message = "Forbidden!"),
-            @ApiResponse(code = 404, message = "Not Found!") })
+            @ApiResponse(code = 404, message = "Not Found!")
+    })
 
     @Validated
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
@@ -64,8 +64,12 @@ public class PetController {
         if(id < 0) {
             throw new DataNotFoundException("Pet not found for id");
         }
-        petService.deletePet(id);
+        petService.deletePetById(id);
     }
+
+//    @Validated
+//    @PostMapping(value = "/{id}/uploadImage")
+//    public void uploadImage(@PathVariable Long id, @RequestPar)
 
 }
 

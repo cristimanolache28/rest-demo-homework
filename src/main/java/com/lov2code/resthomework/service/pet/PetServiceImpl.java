@@ -23,16 +23,17 @@ public class PetServiceImpl implements PetService{
     }
 
     @Override
-    public Pet updatePetById(Pet pet, Long id) {
-        Pet existingPet = petRepository.findPetByID(id).orElseThrow(
-                () -> new DataNotFoundException("User not exist."));
-
-        // TODO:
-        existingPet.setName("Dog2");
-        existingPet.setStatus("unavailable");
-        existingPet.setPhotoUrls(Collections.singletonList("New Photo"));
-        petRepository.save(existingPet);
-        return existingPet;
+    public void updatePetById(Pet pet, Long id) {
+//        Pet existingPet = petRepository.findPetByID(id).orElseThrow(
+//                () -> new DataNotFoundException("User not exist."));
+//
+//
+//        existingPet.setName("Dog2");
+//        existingPet.setStatus("unavailable");
+//        existingPet.setPhotoUrls(Collections.singletonList("New Photo"));
+//        petRepository.save(existingPet);
+//        return existingPet;
+        petRepository.update(pet);
     }
 
     @Override
@@ -41,7 +42,12 @@ public class PetServiceImpl implements PetService{
     }
 
     @Override
-    public void deletePet(Long id) {
+    public void deletePetById(Long id) {
         petRepository.delete(id);
+    }
+
+    @Override
+    public Optional<Pet> findPetByStatus(String status) {
+        return Optional.empty();
     }
 }

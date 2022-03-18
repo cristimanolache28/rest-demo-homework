@@ -1,5 +1,6 @@
 package com.lov2code.resthomework.model;
 
+import com.lov2code.resthomework.common.StatusPet;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -22,16 +23,19 @@ public class Pet {
     private String name;
 
     @NotNull
-    private List<String> photoUrls = new ArrayList<>();
+    private String[] photoUrls;
 
     @NotNull
-    private List<Tag> tags = new ArrayList<>();
+    private Tag[] tags;
 
     @NotNull
-    private String status;
+    private StatusPet status;
 
-    public Pet(Category category) {
+    public Pet(Category category, String name, String[] photoUrls, Tag[] tags, StatusPet status) {
         this.category = category;
+        this.name = name;
+        this.photoUrls = photoUrls;
+        this.tags = tags;
+        this.status = status;
     }
-
 }

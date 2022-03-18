@@ -8,9 +8,10 @@ import java.util.Optional;
 public interface PetService {
 
     void savePet(Pet pet);
-    Pet updatePetById(Pet pet, Long id);
+    void updatePetById(Pet pet, Long id);
     Optional<Pet> findPetById(Long id);
-    void deletePet(Long id);
+    void deletePetById(Long id);
+    Optional<Pet> findPetByStatus(String status);
 
 }
 
