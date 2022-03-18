@@ -12,7 +12,7 @@ import java.util.List;
 @Setter
 public class Pet {
 
-    protected Long id;
+    protected long id;
 
     @NotNull
     private Category category;
@@ -33,4 +33,5 @@ public class Pet {
     public Pet(Category category) {
         this.category = category;
     }
+
 }

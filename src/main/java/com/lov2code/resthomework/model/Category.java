@@ -10,9 +10,14 @@ import javax.validation.constraints.Size;
 @Setter
 public class Category {
 
-    private Long id;
+    private long id;
 
     @NotNull
     @Size(min = 3, max = 30)
     private String name;
+
+    public Category(long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
 }

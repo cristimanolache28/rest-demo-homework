@@ -10,9 +10,9 @@ import javax.validation.constraints.Size;
 @Setter
 public class Tag {
 
-    private Long id;
+    private long id;
 
     @NotNull
-    @Size(min = 3, max = 15)
+    @Size(min = 2, max = 15)
     private String name;
 }
