@@ -1,4 +1,4 @@
-package com.lov2code;
+package com.lov2code.resthomework;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

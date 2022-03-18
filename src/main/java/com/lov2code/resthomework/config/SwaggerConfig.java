@@ -1,4 +1,4 @@
-package com.lov2code.config;
+package com.lov2code.resthomework.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

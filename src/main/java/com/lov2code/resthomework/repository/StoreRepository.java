@@ -1,4 +1,4 @@
-package com.lov2code.repository;
+package com.lov2code.resthomework.repository;
 
 import org.springframework.stereotype.Repository;
 

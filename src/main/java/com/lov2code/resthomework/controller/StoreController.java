@@ -1,4 +1,4 @@
-package com.lov2code.controller;
+package com.lov2code.resthomework.controller;
 
 import org.springframework.web.bind.annotation.RestController;
 
