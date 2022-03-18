@@ -3,6 +3,7 @@ package com.lov2code.resthomework.service.pet;
 
 import com.lov2code.resthomework.model.Pet;
 
+import java.util.List;
 import java.util.Optional;
 
 public interface PetService {
@@ -12,6 +13,7 @@ public interface PetService {
     Optional<Pet> findPetById(Long id);
     void deletePetById(Long id);
     Optional<Pet> findPetByStatus(String status);
+    List<Pet> getAllPets();
 
 }
 

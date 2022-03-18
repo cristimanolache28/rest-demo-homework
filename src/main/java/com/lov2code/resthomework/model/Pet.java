@@ -13,7 +13,7 @@ import java.util.List;
 @Setter
 public class Pet {
 
-    protected long id;
+    protected Long id;
 
     @NotNull
     private Category category;

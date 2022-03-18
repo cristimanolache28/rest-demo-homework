@@ -72,7 +72,7 @@ public class PetRepository{
 
     }
 
-    public void save(Pet pet) {
+    public void savePet(Pet pet) {
         pets.compute(pet.getId(), (key, value) -> pet);
     }
 
@@ -86,6 +86,10 @@ public class PetRepository{
 
     public void update(Pet pet) {
         pets.put(pet.getId(), pet);
+    }
+
+    public List<Pet> findAllPets() {
+        return new ArrayList<>(pets.values());
     }
 
 }
